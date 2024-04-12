@@ -8,11 +8,4 @@ const SignUpPage = () => {
 	)
 }
 
-export async function getStaticPaths() {
-	return {
-		paths: [],
-		fallback: false,
-	}
-}
-
 export default SignUpPage
