@@ -16,10 +16,71 @@
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
+5. 🤖 [Настройка AI-чат бота](#chatbot)
+6. 🧠 [AI-функции в видеозвонках](#ai-features)
 
 ## <a name="introduction">🤖 Introduction</a>
 
 Built with the latest Next.js and TypeScript, this project replicates Zoom, a widely used video conferencing tool. It enables users to securely log in, create meetings and access various meeting functionalities such as recording, screen sharing, and managing participants.
+
+## <a name="chatbot">🤖 Настройка AI-чат бота</a>
+
+Приложение включает в себя AI-чат бота на базе Deepseek API. Для корректной работы следуйте инструкциям:
+
+1. Получите API-ключ на [платформе Deepseek](https://platform.deepseek.com/)
+2. Создайте файл `.env.local` в корне проекта (можно скопировать из `.env.local.example`)
+3. Добавьте ваш API-ключ в переменную окружения `NEXT_PUBLIC_DEEPSEEK_API_KEY`
+
+Пример:
+
+```
+NEXT_PUBLIC_DEEPSEEK_API_KEY=sk-your-api-key-here
+```
+
+После настройки API-ключа чат-бот будет полностью функциональным и сможет отвечать на вопросы пользователей.
+
+Особенности чат-бота:
+
+- Интеграция с Deepseek AI
+- Сохранение контекста беседы
+- Красивый и интуитивно понятный интерфейс
+- Возможность копирования сообщений
+- Индикация загрузки при ожидании ответа
+
+## <a name="ai-features">🧠 AI-функции в видеозвонках</a>
+
+Приложение оснащено расширенными AI-возможностями, которые делают видеоконференции более продуктивными и доступными:
+
+### 🎯 Автоматические субтитры и перевод
+
+Во время звонка вы можете включить функцию субтитров, которая:
+
+- В реальном времени распознает речь участников
+- Отображает текст с указанием говорящего
+- Поддерживает перевод на несколько языков (русский, английский, испанский, французский, немецкий, китайский)
+- Сохраняет историю субтитров для просмотра
+
+Для включения нажмите кнопку с иконкой сообщения в нижней панели управления звонком.
+
+### 📝 Умный ассистент для встреч
+
+Ассистент встречи анализирует содержание разговора и предоставляет полезную информацию:
+
+- Создает краткие резюме всей встречи
+- Выделяет ключевые моменты и решения
+- Формирует список задач с возможностью отслеживания
+- Анализирует эмоциональный тон обсуждения
+
+Для использования ассистента нажмите на кнопку с иконкой робота в нижней панели управления звонком.
+
+### ⚙️ Настройка AI-функций
+
+Все AI-функции используют тот же API-ключ Deepseek, что и чат-бот:
+
+1. Проверьте, что у вас настроен API-ключ в `.env.local` (см. раздел "Настройка AI-чат бота")
+2. API-ключ должен быть добавлен в переменную окружения `NEXT_PUBLIC_DEEPSEEK_API_KEY`
+
+После настройки API-ключа все AI-функции будут доступны автоматически.
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -29,6 +90,8 @@ Built with the latest Next.js and TypeScript, this project replicates Zoom, a wi
 - getstream
 - shadcn
 - Tailwind CSS
+- Deepseek API
+- Stream SDK для транскрипции речи
 
 ## <a name="features">🔋 Features</a>
 
@@ -53,6 +116,12 @@ Built with the latest Next.js and TypeScript, this project replicates Zoom, a wi
 👉 **Secure Real-time Functionality**: All interactions within the platform are secure and occur in real-time, maintaining user privacy and data integrity.
 
 👉 **Responsive Design**: Follows responsive design principles to ensure optimal user experience across devices, adapting seamlessly to different screen sizes and resolutions.
+
+👉 **AI-powered Chat Bot**: Integrated Deepseek AI chat assistant that can respond to user queries, provide technical support, and enhance meeting experience.
+
+👉 **Real-time Transcription & Translation**: Automatic speech recognition with support for multiple languages, enabling accessibility and cross-language communication during calls.
+
+👉 **Meeting Assistant**: Smart AI tool that analyzes meeting content to provide summaries, extract action items, key points, and decisions, helping teams stay organized.
 
 and many more, including code architecture and reusability.
 
